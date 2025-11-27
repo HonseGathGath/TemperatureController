@@ -1,0 +1,3 @@
+seuil_min=10.0
+seuil_max=50.0
+intervalle_mesure=5
