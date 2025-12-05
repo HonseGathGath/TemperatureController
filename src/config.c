@@ -1,10 +1,11 @@
+#include "config.h"
 #include <stdio.h>
 
 static int intervalle_mesure = 10.0;
 static double seuil_max = 10.0;
 static double seuil_min = 10.0;
 
-void read_config() {
+config read_config() {
   FILE *file = fopen("data/config.txt", "r");
   if (file == NULL) {
     printf("couldn't open file !!!! wenou ya 7mayza\n");
@@ -22,6 +23,10 @@ void read_config() {
   } else {
     printf("couldnt read config. fallback to defaults.\n");
   }
+
+  config current_config = {seuil_min, seuil_max, intervalle_mesure};
+
+  return current_config;
 }
 
 double get_seuil_min() { return seuil_min; }
