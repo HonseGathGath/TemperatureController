@@ -13,6 +13,9 @@ SOURCES = $(SRC_DIR)/main.c \
 	  $(SRC_DIR)/logger.c \
 	  $(SRC_DIR)/stats.c
 
+DOCTARGETS = $(DATA_DIR)/journal_temerature.txt \
+	     $(DATA_DIR)/rapport_journalier.txt
+
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
@@ -43,6 +46,12 @@ test: $(TARGET)
 tree:
 	@echo "📁 Project Structure:"
 	@tree -I '*.o|$(TARGET)'
+
+reset:
+	rm -f $(TARGET)
+	rm -f $(DOCTARGETS)
+	touch $(DOCTARGETS)	
+	@echo "🗑️  reset completed"
 
 help:
 	@echo "Available targets:"
