@@ -13,7 +13,7 @@ SOURCES = $(SRC_DIR)/main.c \
 	  $(SRC_DIR)/logger.c \
 	  $(SRC_DIR)/stats.c
 
-DOCTARGETS = $(DATA_DIR)/journal_temerature.txt \
+DOCTARGETS = $(DATA_DIR)/journal_temperature.txt \
 	     $(DATA_DIR)/rapport_journalier.txt
 
 all: $(TARGET)
