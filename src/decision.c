@@ -1,5 +1,4 @@
 #include "decision.h"
-#include <stdio.h>
 
 AlertLevel check_temperature(double temperature, const config *config) {
   if (temperature < config->seuil_min) {
@@ -11,16 +10,18 @@ AlertLevel check_temperature(double temperature, const config *config) {
   }
 }
 
-void print_alert(AlertLevel alert, double temperature) {
+char *print_alert(AlertLevel alert) {
   switch (alert) {
   case ALERT_NONE:
-    printf("jawwek behi:%.1f°c\n", temperature);
+    return "jawwek behi";
     break;
   case ALERT_TEMP_LOW:
-    printf("Low temperature: %.1f°c\n", temperature);
+    return "Low temperature";
     break;
   case ALERT_TEMP_HIGH:
-    printf("High temperature: %.1f°c\n", temperature);
+    return "High temperature";
     break;
+  default:
+    return "unknown";
   }
 }

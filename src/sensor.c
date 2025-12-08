@@ -9,7 +9,7 @@ double read_temperature() {
     initialized = 1;
   }
 
-  double temp = 15.0 + (rand() % 200) / 10.0;
+  double temp = (rand() % 200) / 5.0;
 
   return temp;
 }

@@ -11,5 +11,5 @@ typedef enum {
 
 AlertLevel check_temperature(double temperature, const config *config);
 
-void print_alert(AlertLevel alert, double temperature);
+char *print_alert(AlertLevel alert);
 #endif
