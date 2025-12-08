@@ -6,20 +6,21 @@ SRC_DIR = src
 DATA_DIR = data
 DOCS_DIR = docs
 
-SOURCES = $(SRC_DIR)/main.c $(SRC_DIR)/config.c $(SRC_DIR)/sensor.c $(SRC_DIR)/decision.c $(SRC_DIR)/logger.c $(SRC_DIR)/stats.c
-OBJECTS = $(SOURCES:.c=.o)
+SOURCES = $(SRC_DIR)/main.c \
+ 	  $(SRC_DIR)/config.c \
+ 	  $(SRC_DIR)/sensor.c \
+    $(SRC_DIR)/decision.c \
+	  $(SRC_DIR)/logger.c \
+	  $(SRC_DIR)/stats.c
 
 all: $(TARGET)
 
-$(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
+$(TARGET): $(SOURCES)
+	$(CC) $(CFLAGS) -I$(SRC_DIR) $(SOURCES) -o $(TARGET)
 	@echo "🚀 Build completed: $(TARGET)"
 
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 clean:
-	rm -f $(OBJECTS) $(TARGET)
+	rm -f $(TARGET)
 	@echo "🧹 Clean completed"
 
 distclean: clean
