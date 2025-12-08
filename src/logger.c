@@ -15,8 +15,8 @@ void journal() {
   printf("Press Ctrl+C to stop anytime \n\n");
   for (int i = 0; i < 5; ++i) {
     double temperature = read_temperature();
-    char formatted_temperature[10];
-    sprintf(formatted_temperature, "%f", temperature);
+    char formatted_temperature[5];
+    sprintf(formatted_temperature, "%.2f", temperature);
 
     AlertLevel alert = check_temperature(temperature, &config);
     char *printed_alert = print_alert(alert);
