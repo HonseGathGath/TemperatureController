@@ -7,6 +7,8 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
+static Statistiques stats;
+static int alertes_consecutives = 0;
 
 void journal() {
   config config = read_config();
