@@ -19,13 +19,12 @@ char *print_alert(AlertLevel alert) {
   switch (alert) {
   case ALERT_NONE:
     return "jawwek behi";
-    break;
-  case ALERT_TEMP_LOW:
-    return "Low temperature";
-    break;
-  case ALERT_TEMP_HIGH:
-    return "High temperature";
-    break;
+  case ALERT_NIVEAU1:
+    return "Avertissement léger";
+  case ALERT_NIVEAU2:
+    return "Alerte modérée";
+  case ALERT_NIVEAU3:
+    return "ALERTE CRITIQUE";
   default:
     return "unknown";
   }
