@@ -5,8 +5,9 @@
 
 typedef enum {
   ALERT_NONE = 0,
-  ALERT_TEMP_LOW = 1,
-  ALERT_TEMP_HIGH = 2
+  ALERT_NIVEAU1 = 1,  // Avertissement léger
+  ALERT_NIVEAU2 = 2,  // Alerte modérée
+  ALERT_NIVEAU3 = 3   // Alerte critique
 } AlertLevel;
 
 AlertLevel check_temperature(double temperature, const config *config);
