@@ -36,7 +36,7 @@ void mettre_a_jour_stats(Statistiques *stats, float temp, int niveau,
 }
 
 void generer_rapport(Statistiques *stats, float seuil_min, float seuil_max) {
-  FILE *fichier = fopen("rapport_journalier.txt", "w");
+  FILE *fichier = fopen("./data/rapport_journalier.txt", "w");
   if (!fichier)
     return;
 
