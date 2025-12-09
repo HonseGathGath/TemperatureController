@@ -11,7 +11,8 @@ SOURCES = $(SRC_DIR)/main.c \
  	  $(SRC_DIR)/sensor.c \
     $(SRC_DIR)/decision.c \
 	  $(SRC_DIR)/logger.c \
-	  $(SRC_DIR)/stats.c
+	  $(SRC_DIR)/stats.c\
+	  $(SRC_DIR)/export.c
 
 DOCTARGETS = $(DATA_DIR)/journal_temperature.txt \
 	     $(DATA_DIR)/rapport_journalier.txt
@@ -50,8 +51,10 @@ tree:
 reset:
 	rm -f $(TARGET)
 	rm -f $(DOCTARGETS)
+	rm -f $(DATA_DIR)/export.csv
 	touch $(DOCTARGETS)	
 	@echo "🗑️  reset completed"
+
 
 help:
 	@echo "Available targets:"

@@ -1,9 +1,8 @@
-```c
 #include "logger.h"
 #include "config.h"
 #include "decision.h"
 #include "sensor.h"
-#include "stat.h"
+#include "stats.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,7 +22,7 @@ void journal() {
     char formatted_temperature[5];
     sprintf(formatted_temperature, "%.2f", temperature);
     AlertLevel alert = check_temperature(temperature, &config);
-    
+
     if (alert != ALERT_NONE) {
       alertes_consecutives++;
       if (alertes_consecutives >= 3) {
@@ -32,9 +31,9 @@ void journal() {
     } else {
       alertes_consecutives = 0;
     }
-    
+
     mettre_a_jour_stats(&stats, temperature, alert, config.intervalle_mesure);
-    
+
     char *printed_alert = print_alert(alert);
     time_t reading_timestamp;
     time(&reading_timestamp);
@@ -68,6 +67,4 @@ void journal() {
   printf("\n Phase 1 test Complete \n");
 }
 
-Statistiques* get_stats() {
-  return &stats;
-}
+Statistiques *get_stats() { return &stats; }

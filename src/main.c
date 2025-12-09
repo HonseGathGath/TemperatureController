@@ -1,6 +1,5 @@
-#include "logger.h"
-#include "stat.h"
 #include "export.h"
+#include "logger.h"
 #include <unistd.h>
 
 int main() {
