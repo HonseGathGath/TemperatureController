@@ -1,0 +1,16 @@
+RAPPORT JOURNALIER
+Date: Wed Dec 10 16:47:49 2025
+
+Seuils: 10.00°C - 20.00°C
+
+Mesures: 5
+Moyenne: 19.16°C
+Min: 13.60°C
+Max: 32.20°C
+
+Alertes Niveau 1: 1
+Alertes Niveau 2: 0
+Alertes Niveau 3: 1
+
+Total alertes: 2
+Temps alerte: 4 sec (0 min)

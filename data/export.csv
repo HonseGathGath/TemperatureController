@@ -1,3 +1,4 @@
+Timestamp,Temperature,Status
 [ Wed Dec 10 16:46:50 2025 ] Temperature: 28.80 - Status: Alerte modérée
 [ Wed Dec 10 16:46:52 2025 ] Temperature: 31.20 - Status: ALERTE CRITIQUE
 [ Wed Dec 10 16:46:54 2025 ] Temperature: 25.40 - Status: Alerte modérée
