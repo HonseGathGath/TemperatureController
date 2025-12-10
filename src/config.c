@@ -8,7 +8,7 @@ static double seuil_min = 10.0;
 config read_config() {
   FILE *file = fopen("data/config.txt", "r");
   if (file == NULL) {
-    printf("couldn't open file !!!! wenou ya 7mayza\n");
+    printf("couldn't open file !!!!\n");
     printf("fallback to defaults.\n");
   } else {
 
